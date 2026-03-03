@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Principal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0e0e0e;
+      --card: #161616;
+      --border: #2a2a2a;
+      --accent: #e8c87a;
+      --text: #f0ece2;
+      --muted: #888;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      color: var(--accent);
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 48px;
+      height: 2px;
+      background: var(--accent);
+      margin: 16px auto 0;
+      opacity: 0.6;
+    }
+
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    nav a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      animation: fadeUp 0.4s ease both;
+    }
+
+    nav a:nth-child(1)  { animation-delay: 0.05s; }
+    nav a:nth-child(2)  { animation-delay: 0.10s; }
+    nav a:nth-child(3)  { animation-delay: 0.15s; }
+    nav a:nth-child(4)  { animation-delay: 0.20s; }
+    nav a:nth-child(5)  { animation-delay: 0.25s; }
+    nav a:nth-child(6)  { animation-delay: 0.30s; }
+    nav a:nth-child(7)  { animation-delay: 0.35s; }
+    nav a:nth-child(8)  { animation-delay: 0.40s; }
+    nav a:nth-child(9)  { animation-delay: 0.45s; }
+    nav a:nth-child(10) { animation-delay: 0.50s; }
+    nav a:nth-child(11) { animation-delay: 0.55s; }
+    nav a:nth-child(12) { animation-delay: 0.60s; }
+    nav a:nth-child(13) { animation-delay: 0.65s; }
+    nav a:nth-child(14) { animation-delay: 0.70s; }
+    nav a:nth-child(15) { animation-delay: 0.75s; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    nav a .num {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      min-width: 28px;
+      opacity: 0.8;
+    }
+
+    nav a .label {
+      flex: 1;
+      padding: 0 16px;
+    }
+
+    nav a .arrow {
+      color: var(--muted);
+      font-size: 1rem;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    nav a::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--accent);
+      transform: scaleY(0);
+      transition: transform 0.2s ease;
+      border-radius: 0 2px 2px 0;
+    }
+
+    nav a:hover {
+      background: #1e1e1e;
+      border-color: #3a3a3a;
+      color: var(--accent);
+    }
+
+    nav a:hover .arrow {
+      transform: translateX(4px);
+      color: var(--accent);
+    }
+
+    nav a:hover::before {
+      transform: scaleY(1);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Menú Principal</h1>
+      <p>Selecciona una página</p>
+      <div class="divider"></div>
+    </header>
+
+    <nav>
+      <!-- ✏️ Cambia "pagina1.html" y "Página 1" por tus archivos y nombres reales -->
+      <a href="page3/landing3.html"><span class="num">01</span><span class="label">Página 3</span><span class="arrow">→</span></a>
+      <a href="page4/landing4.html"><span class="num">02</span><span class="label">Página 4</span><span class="arrow">→</span></a>
+      <a href="page6/landing6.html"><span class="num">03</span><span class="label">Página 6</span><span class="arrow">→</span></a>
+      <a href="page10/landing10.html"><span class="num">04</span><span class="label">Página 10</span><span class="arrow">→</span></a>
+      <a href="page11/landing11.html"><span class="num">05</span><span class="label">Página 11</span><span class="arrow">→</span></a>
+      <a href="page12/landing12.html"><span class="num">06</span><span class="label">Página 12</span><span class="arrow">→</span></a>
+      <a href="page14/landing14.html"><span class="num">07</span><span class="label">Página 14</span><span class="arrow">→</span></a>
+      <a href="page15/landing15.html"><span class="num">08</span><span class="label">Página 15</span><span class="arrow">→</span></a>
+      <a href="page22/landing22.html"><span class="num">09</span><span class="label">Página 22</span><span class="arrow">→</span></a>
+      <a href="page33/landing33.html"><span class="num">10</span><span class="label">Página 33</span><span class="arrow">→</span></a>
+      <a href="page38/landing38.html"><span class="num">11</span><span class="label">Página 38</span><span class="arrow">→</span></a>
+      <a href="page40/landing40.html"><span class="num">12</span><span class="label">Página 40</span><span class="arrow">→</span></a>
+      <a href="page41/landing41.html"><span class="num">13</span><span class="label">Página 41</span><span class="arrow">→</span></a>
+      <a href="page45/landing45.html"><span class="num">14</span><span class="label">Página 45</span><span class="arrow">→</span></a>
+      <a href="page50/landing50.html"><span class="num">15</span><span class="label">Página 50</span><span class="arrow">→</span></a>
+    </nav>
+
+    <footer>
+    </footer>
+  </div>
+</body>
+</html>
